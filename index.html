@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:title"
+            content="Drew">
+        <!-- Meta description -->
+        <meta name="description"
+            content="A simple page ">
+        <meta name="author" content="JEaLiFe">
+        <meta property="og:site_name" content="Drew>
+        <meta property="og:type" content="website">
+        <!-- image mise en avant -->
+        <meta property="og:image"
+            content="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drew</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+            rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <!-- ==================  Header ================== -->
+        <header>
+            <nav class="nav container">
+                <div class="logo">
+                    <h2>
+                        Drew
+                    </h2>
+                </div>
+                <div class="menu-icon none">
+                    <i class='bx bx-menu-alt-right showMenu'></i>
+                </div>
+                <div class="menu menu-dropdown menu-dropdown--fade-in none hide">
+                    <a href="#" class="menu-link active">Home</a>
+                    <a href="#" class="menu-link">About</a>
+                    <a href="#" class="menu-link">Skills</a>
+                    <a href="#" class="menu-link">Works</a>
+                    <a href="#" class="menu-link">Contacts</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ======================== main  ======================== -->
+        <main>
+            <section class="hero-section">
+
+                <div class="hero-section-left">
+
+                    <div class="hero-section-left-top-content">
+                        <h1>
+                            Hello, <br> I am <span> Drew </span>
+                            Web Designer
+                        </h1>
+                        <a href="#" class="btn-hero">Contact</a>
+                    </div>
+
+                    <div class="hero-section-left-social">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-behance'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+
+                </div>
+
+                <div class="hero-section-right">
+                    <img src="assets/images/drew-picture.png" alt>
+                </div>
+
+            </section>
+
+        </main>
+
+        <script>
+            //menu dropdown animation
+
+            const showMenu = document.querySelector('.showMenu');
+            const dropdown = document.querySelector('.menu-dropdown');
+
+            showMenu.addEventListener('click', ()=>{
+                dropdown.classList.remove('none');
+                dropdown.classList.toggle('hide');
+                dropdown.classList.toggle('menu-dropdown--fade-out'); 
+            });
+
+
+            document. addEventListener("click", (event)=>{
+                const isClickInsideDropdown = dropdown.contains(event.target);
+                const ismenuclicked = showMenu.contains(event.target);
+                if (!isClickInsideDropdown && !ismenuclicked) {
+                    dropdown.classList.add('hide');
+                    dropdown.classList.add('menu-dropdown--fade-in');
+                }
+                
+            });
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
