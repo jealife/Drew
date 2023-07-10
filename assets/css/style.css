@@ -178,6 +178,7 @@ header {
 /* ==============================  Responsive  ==============================  */
 
 @media (max-width: 500px) {
+    /* Menu  */
     .menu-dropdown--fade-in {
         animation: fadeInAnimation ease-in-out .5s forwards;
     
@@ -276,7 +277,7 @@ header {
 
 
 
-    /*  */
+    /*  hero  */
     .hero-section {
         flex-direction: column;
     }
